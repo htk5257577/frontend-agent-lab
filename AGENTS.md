@@ -94,6 +94,8 @@ Issues, PRDs, and implementation tickets are tracked in GitHub Issues using the 
 
 Use the canonical `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix` labels. See `docs/agents/triage-labels.md`.
 
+Before applying `ready-for-agent`, verify the issue against `docs/agents/definition-of-ready.md` and require explicit human approval.
+
 ### Domain docs
 
 This is a single-context repository using `CONTEXT.md` and `docs/adr/` at the repository root. See `docs/agents/domain.md`.

@@ -16,5 +16,5 @@ These labels describe whether an issue is ready to be acted on.
 - New or changed issues begin with `needs-triage`.
 - Use `needs-info` only after identifying the specific missing information.
 - When the missing information is supplied, move the issue back to `needs-triage`.
-- Apply `ready-for-agent` only after requirements, acceptance criteria, dependencies, and material ambiguities have been resolved and reviewed by a human.
+- Apply `ready-for-agent` only after the issue passes `docs/agents/definition-of-ready.md` and receives explicit human approval.
 - Execution states such as in progress, review, CI failure, or blocked are separate from these triage labels.
