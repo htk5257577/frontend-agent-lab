@@ -83,3 +83,17 @@ Report:
 - What changed
 - Which verification commands passed
 - Any remaining risks or assumptions
+
+## Agent skills
+
+### Issue tracker
+
+Issues, PRDs, and implementation tickets are tracked in GitHub Issues using the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the canonical `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix` labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repository using `CONTEXT.md` and `docs/adr/` at the repository root. See `docs/agents/domain.md`.
