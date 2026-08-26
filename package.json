@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
     "dev": "vite",
+    "prototype:ui": "vite --open /prototypes/suicaizuo-ui/index.html?variant=A",
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
     "preview": "vite preview",

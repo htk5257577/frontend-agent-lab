@@ -13,6 +13,7 @@ An item may be marked not applicable only when its category does not apply to th
 - [ ] Important out-of-scope behavior is explicit.
 - [ ] Acceptance criteria are observable or testable.
 - [ ] Relevant text, designs, prototypes, screenshots, API documentation, and other sources of truth are linked or attached when they exist.
+- [ ] The canonical requirement source is identified; mutable Jira, Confluence, Axure, or design sources include a precise issue/page/revision/version or captured timestamp.
 - [ ] Conflicts between sources of truth are resolved.
 - [ ] Dependencies and blocking relationships are identified.
 - [ ] No unresolved question can materially change behavior, data, scope, or user experience.
@@ -25,12 +26,18 @@ Silence, inactivity, or an agent's confidence is not human approval. Record appr
 
 When the issue changes a page, component, or user interaction:
 
-- [ ] An approved design source is provided, or the issue explicitly authorizes following existing project patterns.
+- [ ] Interaction, layout, and theme are evaluated separately; each applicable dimension uses an exact approved design, an exact existing pattern already permitted by repository rules, or a recorded choice made for the current task.
+- [ ] Each dimension is precise and traceable: an Axure page/revision, exact Figma/Penpot node/version, prototype commit SHA plus route/parameters, or exact existing page/component/flow.
+- [ ] For an existing project, every reused pattern names its exact reference and the repository rule that permits reuse. For a new project, no legacy-project fallback is assumed and every missing dimension has 2–3 materially different proposals before selection.
+- [ ] A current decision-maker, decision time, and selected version are recorded only when the task introduces an AI-generated option, resolves a source conflict, or intentionally changes an existing pattern.
 - [ ] The affected routes, pages, components, and interactions are identified.
-- [ ] Responsive behavior is defined when applicable.
+- [ ] Required desktop/mobile viewports and responsive behavior are defined when applicable.
 - [ ] Applicable loading, empty, error, disabled, and success states are defined.
 - [ ] Keyboard and accessibility expectations are defined.
 - [ ] Required copy and visual assets are provided, or the issue explicitly authorizes the agent to create them.
+- [ ] Allowed visual deviations and the conflict owner are stated when the design, specification, component library, or current product can disagree.
+
+Readiness is independent of framework and component-library choice. Vue, React, Element Plus, shadcn/ui, or any other tool is only a repository adapter and never substitutes for the design and acceptance information above.
 
 ## API and data work
 
@@ -45,9 +52,11 @@ When the issue reads or writes remote or persistent data:
 
 When the issue reports incorrect behavior:
 
-- [ ] Reproduction steps are provided or the failure can be reproduced reliably.
+- [ ] The affected environment, app version/commit, route, browser/device, role, flags, and data preconditions are stated when relevant.
+- [ ] Minimal reproduction steps are provided or the failure can be reproduced reliably.
 - [ ] Actual and expected behavior are distinguished.
-- [ ] Relevant screenshots, logs, or error messages are attached when available.
+- [ ] Impact, affected users, and occurrence frequency are stated.
+- [ ] Relevant screenshots, recordings, complete errors, logs, network evidence, or Playwright traces are attached when available and have secrets/PII removed.
 - [ ] The failure can be expressed as a regression test or another repeatable check.
 - [ ] The behavior that must remain protected after the fix is stated.
 

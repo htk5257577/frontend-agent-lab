@@ -1,0 +1,138 @@
+:root {
+  color: #20231e;
+  background: #f5f0e6;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #f5f0e6;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #2b75ff;
+  outline-offset: 3px;
+}
+
+.prototype-shell {
+  min-height: 100vh;
+}
+
+.prototype-switcher {
+  position: fixed;
+  z-index: 1000;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  left: 50%;
+  display: grid;
+  grid-template-columns: auto 40px minmax(132px, auto) 40px;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: rgb(20 21 19 / 94%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 999px;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 28%);
+  transform: translateX(-50%);
+  backdrop-filter: blur(14px);
+}
+
+.prototype-switcher__tag {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  color: #161712;
+  background: #d9ff66;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.prototype-switcher button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.prototype-switcher button:hover {
+  background: rgb(255 255 255 / 13%);
+}
+
+.prototype-switcher__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.prototype-switcher__label strong {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  color: #141511;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.prototype-empty {
+  padding: 42px 24px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .prototype-switcher {
+    grid-template-columns: 36px minmax(120px, auto) 36px;
+  }
+
+  .prototype-switcher__tag {
+    display: none;
+  }
+
+  .prototype-switcher button {
+    width: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

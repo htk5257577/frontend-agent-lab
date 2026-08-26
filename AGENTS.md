@@ -64,6 +64,15 @@ Use pnpm only. Do not use npm or Yarn.
 - Do not disable lint rules or weaken TypeScript settings just to make validation pass.
 - Do not claim completion when required verification commands have not passed.
 
+### Consistency
+
+- Treat ESLint, Prettier, TypeScript, tests, and CI as executable rules; prose instructions do not override a failing gate.
+- Do not add a second linter, formatter, package manager, or competing convention for the same responsibility.
+- Follow existing naming, import, component, state, and test patterns unless the task explicitly changes the convention.
+- AI-generated code follows the same rules and review process as human-written code; do not create exceptions for generated files.
+- When intentionally changing a shared convention, update the relevant configuration, `AGENTS.md`, examples, and tests in the same PR.
+- CI installs from the committed lockfile with `pnpm install --frozen-lockfile`; dependency changes must update `package.json` and `pnpm-lock.yaml` together.
+
 ## Required workflow
 
 1. Read the task and relevant existing files before editing.
