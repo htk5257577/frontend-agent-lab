@@ -8,7 +8,7 @@
 
 ## 先读这些文档
 
-- [前端 AI 自动化工作流总纲](docs/ai-frontend-workflow.md)：完整流程、人与 AI 的边界、工具映射、失败恢复和建设路线
+- [前端 AI 自动化工作流手册](docs/ai-frontend-workflow.md)：跨业务、跨框架的流程、人与 AI 的边界、工具映射、失败恢复和建设路线
 - [Agent 执行规则](AGENTS.md)：agent 在本仓库中的编码和验证约束
 - [Definition of Ready](docs/agents/definition-of-ready.md)：任务进入 `ready-for-agent` 前必须满足的条件
 - [任务状态标签](docs/agents/triage-labels.md)：`needs-triage`、`needs-info`、`ready-for-agent` 等标签含义
@@ -30,14 +30,14 @@
 
 尚未完成：
 
-- 接手人通过 AI + Penpot MCP 生成正式候选原型并完成设计选择
+- 通过 AI + Penpot MCP 生成正式候选原型并完成人工设计选择
 - 在真实 PR 上验证 GitHub CI 后启用分支保护
 - 独立 AI CR 必需检查和最多两轮的自动修复
 - 标签触发的无人值守执行器
 - 预览环境和视觉回归
 - 失败恢复、合并后反馈、执行指标和 GitLab 适配
 
-详细路线见[工作流总纲](docs/ai-frontend-workflow.md#11-当前进度与后续建设顺序)。
+详细路线见 [POC 建设与验证记录](docs/poc-validation.md#3-后续建设顺序)。
 
 ## 环境要求
 
@@ -60,21 +60,21 @@ pnpm run check:all
 
 ## UI 工作流原型
 
-当前的一次性代码原型只用于给接手人提供参考，不属于正式产品代码，也不是可以直接批准的设计候选：
+当前的一次性代码原型只用于设计探索参考，不属于正式产品代码，也不是可以直接批准的设计候选：
 
 ```bash
 pnpm run prototype:ui
 ```
 
-通过页面底部切换器或键盘方向键查看 A、B、C 三套参考。接手人需要根据 [Issue #1](https://github.com/htk5257577/frontend-agent-lab/issues/1)，使用 AI 通过 Penpot MCP 重新生成 2–3 套有实质差异的 Penpot 原型，再由人选择和批准；实现 agent 只能依据最终批准的 Penpot 版本编码。详细交接说明见 [`prototypes/suicaizuo-ui/README.md`](prototypes/suicaizuo-ui/README.md)。
+通过页面底部切换器或键盘方向键查看 A、B、C 三套参考。流程验证者需要根据 [Issue #1](https://github.com/htk5257577/frontend-agent-lab/issues/1)，使用 AI 通过 Penpot MCP 重新生成 2–3 套有实质差异的 Penpot 原型，再由人选择和批准；实现 agent 只能依据最终批准的 Penpot 版本编码。详细说明见 [`prototypes/suicaizuo-ui/README.md`](prototypes/suicaizuo-ui/README.md)。
 
-## POC 交接入口
+## POC 验证入口
 
 - 示例需求：[Issue #1：根据已有食材推荐菜谱](https://github.com/htk5257577/frontend-agent-lab/issues/1)
 - 代码参考原型：[`prototypes/suicaizuo-ui/`](prototypes/suicaizuo-ui/)
-- 完整建设路线：[工作流总纲第 11 节](docs/ai-frontend-workflow.md#11-当前进度与后续建设顺序)
-- 代码规范保障：[工作流总纲第 14 节](docs/ai-frontend-workflow.md#14-如何保证代码规范和一致性)
-- 接手验证清单：[工作流总纲第 15 节](docs/ai-frontend-workflow.md#15-用食材推荐需求验证完整工作流)
+- 完整建设路线：[POC 建设与验证记录第 3 节](docs/poc-validation.md#3-后续建设顺序)
+- 代码规范保障：[通用工作流手册第 14 节](docs/ai-frontend-workflow.md#14-如何保证代码规范和一致性)
+- 需求验证清单：[POC 建设与验证记录第 4 节](docs/poc-validation.md#4-用食材推荐需求验证工作流)
 
 ## 推荐的新需求流程
 

@@ -1,8 +1,8 @@
 # “随材做”UI 参考原型
 
-这里的 A、B、C 三套可运行页面是早期代码探索，只用于帮助接手人理解可能的信息层级、交互范围和视觉方向。
+这里的 A、B、C 三套可运行页面是早期代码探索，只用于帮助理解可能的信息层级、交互范围和视觉方向。
 
-它们不是正式候选设计，不能让负责人直接从 A、B、C 中选择，也不能作为实现 agent 的 UI 事实来源。接手人必须根据 [GitHub Issue #1](https://github.com/htk5257577/frontend-agent-lab/issues/1)，使用 AI 通过 Penpot 官方 MCP 重新生成 2–3 套有实质差异的 Penpot 原型，再由人选择。
+它们不是正式候选设计，不能让负责人直接从 A、B、C 中选择，也不能作为实现 agent 的 UI 事实来源。流程验证者必须根据 [GitHub Issue #1](https://github.com/htk5257577/frontend-agent-lab/issues/1)，使用 AI 通过 Penpot 官方 MCP 重新生成 2–3 套有实质差异的 Penpot 原型，再由人选择。
 
 ## 查看参考原型
 
@@ -12,7 +12,7 @@ pnpm run prototype:ui
 
 通过页面底部切换器或键盘方向键查看三个方向。URL 中的 `variant=A|B|C` 切换方案，`ingredients` 参数提供固定的已选食材状态。
 
-## 接手人的设计任务
+## 正式设计任务
 
 1. 阅读 Issue #1，区分已确认需求、待确认规则和范围外内容。
 2. 运行这里的三个页面，只提取值得参考的问题和思路，不机械复制任何一套。
